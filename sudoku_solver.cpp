@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 using namespace std;
-
+//test
 #define N 9
 
 void printBoard(int arr[N][N]) {

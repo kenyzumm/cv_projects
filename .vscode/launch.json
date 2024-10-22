@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/j.blonski/Desktop/Git/cv_projects/cv_projects",
+      "program": "/Users/j.blonski/Desktop/Git/cv_projects/cv_projects/build/Debug/outDebug"
+    }
+  ]
+}
