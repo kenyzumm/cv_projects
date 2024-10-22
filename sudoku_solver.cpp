@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 using namespace std;
-//test
+
 #define N 9
 
 void printBoard(int arr[N][N]) {
@@ -10,7 +10,6 @@ void printBoard(int arr[N][N]) {
 		cout << endl;
 	}
 }
-
 bool isRowSafe(int arr[N][N], int row, int num) {
 	for(int col = 0; col<N; col++) {
 		if (arr[row][col] == num)
