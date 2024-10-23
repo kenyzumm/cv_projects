@@ -3,6 +3,7 @@ using namespace std;
 
 #define N 9
 
+//pokazanie tablicy w konsoli
 void printBoard(int arr[N][N]) {
 	for (int i = 0; i <= 8; i++){
 		for (int j = 0; j <= 8; j++)
@@ -10,6 +11,7 @@ void printBoard(int arr[N][N]) {
 		cout << endl;
 	}
 }
+//sprawdzenie, czy rząd jest ok
 bool isRowSafe(int arr[N][N], int row, int num) {
 	for(int col = 0; col<N; col++) {
 		if (arr[row][col] == num)
@@ -17,7 +19,7 @@ bool isRowSafe(int arr[N][N], int row, int num) {
 	}
 	return true;
 }
-
+//sprawdzenie, czy kolumna jest ok
 bool isColSafe(int arr[N][N], int col, int num) {
 	for (int row = 0; row < N; row++) {
 		if (arr[row][col] == num)
@@ -25,7 +27,7 @@ bool isColSafe(int arr[N][N], int col, int num) {
 	}
 	return true;
 }
-
+//sprawdzenie, czy 3x3 jest ok
 bool isBoxSafe(int arr[N][N], int sRow, int sCol, int num) {
 	for (int row = 0; row < 3; row++)
 		for (int col = 0; col < 3; col++) {
@@ -34,13 +36,13 @@ bool isBoxSafe(int arr[N][N], int sRow, int sCol, int num) {
 		}
 	return true;
 }
-
+//sprawdzenie, czy 3 poprzednie warunki są ok
 bool isSafe(int arr[N][N], int row, int col, int num) {
 	return	isRowSafe(arr, row, num) &&
 			isColSafe(arr, col, num) &&
 			isBoxSafe(arr, row - row % 3, col - col % 3, num);
 }
-
+//rozwiazanie przez backtracking
 bool solve(int arr[N][N]) {
 	int row, col;
 	bool isEmpty = false;
