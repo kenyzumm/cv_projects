@@ -175,6 +175,7 @@ bool moveRight(int arr[N][N])
                 }
     return isPossible;
 }
+
 //sprawdzenie czy mozliwy jest jakikolwiek ruch dla uzytkownika
 bool isPossible(int arr[N][N])
 {
@@ -196,6 +197,7 @@ bool isPossible(int arr[N][N])
             
     return false;
 }
+
 bool move(int arr[N][N])
 {
     if(isPossible(arr))
