@@ -1,21 +1,22 @@
 #include <iostream>
 #include <cstdio>
 #include <stdlib.h>
+#include <iomanip>
 
 using namespace std;
 
 #define N 4
 
-//do poprawy wysietlanie (rozjezdza sie gdy od liczby 16)
+//wyswietlenie tablicy
 void showBoard(int arr[N][N])
 {
-    cout << "-----------------" << endl; 
+    cout << "-----------------------------" << endl; 
     for(int i=0; i<N; i++)
     {
         cout << "| ";
         for(int j=0; j<N; j++)
-            cout << arr[i][j] << " | ";
-        cout << endl << "-----------------" << endl;
+            cout << setw(4) << arr[i][j] << " | ";
+        cout << endl << "-----------------------------" << endl;
     }
 }
 
@@ -268,8 +269,8 @@ int main()
     {
         {2,4,2,4,},
         {4,2,4,2,},
-        {2,4,2,4,},
-        {4,2,2,0,}
+        {2,64,32,16,},
+        {4,16,0,0,}
     };*/
     if(play(arr)==false)
     {
